@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SHOP</title>
-    <style>
+    <style type="test/css">
         @import url（'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
 
         * {
@@ -94,11 +94,12 @@
         <input type="text" placeholder="Телефон" id="user_phone">
         <button id="order">Оформить</button>
     </form>
-    <script src="https://telegram.org/js/telegram-web -app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
+        tg.expand();
 
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
