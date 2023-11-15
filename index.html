@@ -84,7 +84,7 @@
     <div id="main">
         <h1>Давай свои деньги и уебывай</h1>
         <img src='imgc.jpg'>
-        <p>Перпл на связи, sooqa</p>
+        <p>Перпл на связи, suka</p>
         <button id="buy">Купить</button>
     </div>
     <form id="form">
@@ -95,6 +95,20 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
+
+        buy.addEventListener("click", ()=> {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+        });
+
+        order.addEventListener("click", () +> {
+        tg.close();
+        });
+
 
     </script>
 </body>
