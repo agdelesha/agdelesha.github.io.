@@ -83,8 +83,8 @@
 <body>
     <div id="main">
         <h1>Давай свои деньги и уебывай</h1>
-        <img src='imgc.jpg'>
-        <p>Перпл на связи, suka</p>
+        <img src="imgc.jpg">
+        <p>Перпл на связи, sooqa</p>
         <button id="buy">Купить</button>
     </div>
     <form id="form">
@@ -99,13 +99,13 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
 
-        buy.addEventListener("click", ()=> {
+        buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
             document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
-        order.addEventListener("click", () +> {
+        order.addEventListener("click", () => {
         tg.close();
         });
 
